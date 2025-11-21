@@ -1,32 +1,19 @@
-# macOS & general editor noise
+# macOS / Windows cruft
 .DS_Store
+Thumbs.db
+
+# Editor swap/state files
 *.swp
 *.swo
+
+# IDE metadata
 .idea/
+.vscode/
 *.iml
 *.ipr
 *.iws
 
-# Kotlin Multiplatform / Android Studio artifacts
-.gradle/
-**/build/
-local.properties
-.kotlin/
-.externalNativeBuild/
-
-# PHP / Laravel
-vendor/
-node_modules/
-public/storage/
-storage/*.key
-storage/logs/
-bootstrap/cache/
-.env
-.env.*
-
-# Misc tooling
-.env.local
-.envrc
-coverage/
-dist/
+# Optional local-only docs or scratchpads
+*.log
 tmp/
+notes-local/
