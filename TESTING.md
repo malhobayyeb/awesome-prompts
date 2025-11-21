@@ -1,6 +1,6 @@
 # Testing & QA Prompt Pack
 
-## Universal Testing Workflows
+## Workflow
 Run steps 1️⃣–5️⃣ once to map and validate gaps; repeat 6️⃣ until every item in `docs/tests/uncovered.md` is checked.
 
 ### 1️⃣ Map All Test Suites
