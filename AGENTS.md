@@ -4,7 +4,7 @@ This document defines how CLI-based agents should behave inside the `awesome-pro
 
 It covers both:
 - 📐 Prompt structure and file layout
-- 🧠 How to generate high-quality, optimized prompts — as done by Prompt Optimizer
+- 🧠 How to generate high-quality, optimized prompts
 
 ---
 
@@ -36,7 +36,7 @@ Each prompt should follow this exact Markdown layout:
 
 Use this layout exactly whenever you add or update prompts in this repo.
 
-🧠 How to Think Like Prompt Optimizer
+## 🧠 How to Think Like a Prompt Engineer
 
 You must follow these exact prompt engineering principles:
 
@@ -102,15 +102,21 @@ For multi-step processes, break the prompt into clearly numbered steps:
 
 ### ✅ Step 1 – Analyze Tests
 
-> Scan all test cases to identify behaviors...
+```md
+Scan all test cases to identify behaviors...
+```
 
 ### ✅ Step 2 – Analyze Code
 
-> Read the source code and identify...
+```md
+Read the source code and identify...
+```
 
 ### ✅ Step 3 – Write Epics
 
-> Create a new file named...
+```md
+Create a new file named...
+```
 
 🟢 7. Format Human-Friendly Output
 
@@ -137,16 +143,20 @@ Instead, use direct, declarative language.
 
 ### ✅ Scan for Uncovered Logic
 
-> Analyze all test files and identify logic branches or business rules that are not covered.  
-> Output your findings in `docs/tests/uncovered.md` using markdown checkboxes.  
-> **Scope:** Only read from `tests/`. Do not modify source code.
+```md
+Analyze all test files and identify logic branches or business rules that are not covered.
+Output your findings in `docs/tests/uncovered.md` using markdown checkboxes.
+**Scope:** Only read from `tests/`. Do not modify source code.
+```
 
 
 ### ✅ Generate Agile User Stories from Code
 
-> Analyze source code and tests. Create `docs/tests/agile-requirements.md` with grouped epics and user stories.  
-> Format: "As a [role], I want to [action] so that [outcome]."  
-> **Scope:** Read-only access to code and test files. Only write to `docs/tests/`.
+```md
+Analyze source code and tests. Create `docs/tests/agile-requirements.md` with grouped epics and user stories.
+Format: "As a [role], I want to [action] so that [outcome]."
+**Scope:** Read-only access to code and test files. Only write to `docs/tests/`.
+```
 
 🧠 Summary
 
@@ -155,4 +165,4 @@ Agents must:
 - Use concise, directive language
 - Declare scope and purpose in every prompt
 - Think like a professional prompt engineer, not a chatbot
-- Reuse structure, style, and quality from Prompt Optimizer
+- Reuse consistent structure, style, and quality across every prompt
