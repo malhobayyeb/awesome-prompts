@@ -1,0 +1,32 @@
+# macOS & general editor noise
+.DS_Store
+*.swp
+*.swo
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Kotlin Multiplatform / Android Studio artifacts
+.gradle/
+**/build/
+local.properties
+.kotlin/
+.externalNativeBuild/
+
+# PHP / Laravel
+vendor/
+node_modules/
+public/storage/
+storage/*.key
+storage/logs/
+bootstrap/cache/
+.env
+.env.*
+
+# Misc tooling
+.env.local
+.envrc
+coverage/
+dist/
+tmp/
