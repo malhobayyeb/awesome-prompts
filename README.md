@@ -10,7 +10,7 @@
 ![Docs Coverage](https://img.shields.io/badge/docs-100%25-blueviolet?style=flat-square)
 ![Made with Markdown](https://img.shields.io/badge/made%20with-Markdown-1f425f.svg)
 
-> A curated collection of prompt playbooks that guide AI agents through rigorous testing and requirements-discovery workflows across whatever stacks you need.
+> A curated collection of prompt playbooks that guide AI agents through testing, static analysis, architectural alignment, and requirements discovery across any stack.
 
 ## Table of Contents
 
@@ -28,12 +28,13 @@
 - **Codify testing intuition** – Each prompt sequence captures a proven exploratory or gap-closing routine so teams can reuse it or hand it to AI agents.
 - **Keep audits reproducible** – Scopes, directories, and guardrails are spelled out, so repeated runs stay consistent across contributors.
 - **Accelerate onboarding** – New engineers can understand how to inspect a codebase without wading through sprawling docs.
-- **Bridge QA and requirements** – The `requirements` playbook extends beyond tests to produce actionable epics and user stories.
+- **Bridge QA, architecture, and requirements** – Playbooks span testing, static analysis, architectural alignment, and epics/user stories for full lifecycle coverage.
 
 ## Repository map
 
 | Path | Description |
 | --- | --- |
+| `AGENTS.md` | Prompt format and engineering standards (scope, tone, repeatability) that every pack follows. |
 | `TESTING.md` | Universal testing and QA workflows for mapping suites, logging gaps, and implementing coverage. |
 | `ARCHITECTURE.md` | Clean architecture refactor guidance plus system comprehension and coverage assessment prompts. |
 | `REQUIREMENTS.md` | Documentation-first routine that derives agile requirements, fills gaps, tags coverage, and summarizes for stakeholders. |
@@ -50,6 +51,14 @@
 3. **Gap log** – Record uncovered cases in `docs/tests/uncovered.md` with actionable checkboxes.
 4. **Validation loop** – Reconcile the log with current tests and prune any false positives.
 5. **Targeted implementation** – Implement and verify the first unchecked gap, then mark it complete.
+
+### Static Analysis Highlights
+
+1. **Tool inventory** – Locate linters, formatters, type checkers, configs, and ignores.
+2. **Baseline run** – Execute tools and capture results in `docs/static-analysis/baseline.md`.
+3. **Finding triage** – Classify issues, note false positives, and log suppressions in `docs/static-analysis/findings.md`.
+4. **Plan remediation** – Build a checkbox plan in `docs/static-analysis/plan.md`, then knock out quick wins.
+5. **Re-run verification** – Re-execute tools, update reports, and mark completed items.
 
 ### Architecture Playbook Highlights
 
@@ -73,28 +82,29 @@
 open TESTING.md   # or ARCHITECTURE.md / REQUIREMENTS.md / STATIC_ANALYSIS.md
 
 # 2. Open the optimized prompt list
-bat TESTING.md
+bat TESTING.md    # swap in the file you’re using
 
 # 3. Follow each prompt in order
 #    - Respect the scope/writing restrictions
-#    - Update docs/tests artifacts only where allowed
+#    - Write only to the allowed doc paths for that pack
 
 # 4. Commit findings or regenerated docs
-git add docs/tests && git commit -m "Document uncovered KMP flows"
+git add docs && git commit -m "Document findings from static analysis run"
 ```
 
 Tips:
 
 - Stick to the scope for each prompt (many explicitly forbid editing anything outside a directory).
 - Use lightweight viewers (e.g., `bat`, `less`, IDE preview) to keep context visible while working.
-- When implementing missing tests, run *only* the targeted subset as explicitly required.
+- When implementing changes (tests or fixes), run only the targeted subset specified by the prompt.
+- If you create new prompts, mirror the format and scope discipline defined in `AGENTS.md`.
 
 ## Customization ideas
 
-- **Add language tracks** – Drop in `flutter/`, `rails/`, or other stacks following the same README-based prompt contract.
-- **Parameterize scopes** – Use templating (e.g., `{{test_dir}}`) if you plan to auto-generate prompts per project.
-- **Badge automation** – Hook up GitHub Actions to auto-update status badges (tests, lint, docs) referenced above.
-- **Docs sync** – Point `docs/tests/*.md` to a knowledge base or wiki if you need richer collaboration.
+- **Add domain packs** – Introduce new files (e.g., `FRONTEND.md`, `DATA.md`) using the same prompt layout and scope rules.
+- **Parameterize scopes** – Use templating (e.g., `{{tests_dir}}`, `{{lint_cmd}}`) for organizations that auto-generate project-specific packs.
+- **Badge automation** – Hook up CI to refresh badges for lint/test/docs status referenced here.
+- **Docs sync** – Point `docs/tests/*` and `docs/static-analysis/*` to your knowledge base if you need richer collaboration.
 
 ## Contributing
 
@@ -108,10 +118,10 @@ _Need inspiration?_ Open an issue with the stack you’d like covered, and we ca
 
 ## Roadmap
 
-- [ ] Expand coverage beyond KMP/Laravel (e.g., React Native, Next.js).
-- [ ] Provide sample `docs/tests/uncovered.md` and `agile-requirements.md` templates.
-- [ ] Add automation scripts that feed prompts directly to AI agents.
-- [ ] Publish a website showcasing each workflow with collapsible sections.
+- [ ] Provide sample templates for `docs/tests/uncovered.md`, `docs/tests/agile-requirements.md`, and `docs/static-analysis/*.md`.
+- [ ] Add more domain packs (e.g., frontend frameworks, data pipelines, mobile).
+- [ ] Add automation scripts that feed prompts directly to AI agents or CI pipelines.
+- [ ] Publish a website showcasing each workflow with collapsible sections and copy-friendly snippets.
 
 ## Acknowledgements
 
