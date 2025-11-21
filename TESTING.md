@@ -18,18 +18,10 @@
 > Read `docs/tests/uncovered.md`, cross-check each entry against existing tests, and remove items already fully covered so only real gaps remain.  
 > **Scope:** Only modify `docs/tests/uncovered.md`; no other file changes.
 
+### ✅ Assess Test Suite Effectiveness
+> Evaluate the presence, structure, and effectiveness of unit, integration, and end-to-end tests. Add any uncovered edge cases, error paths, and failure handling gaps as new checklist items in `docs/tests/uncovered.md`.  
+> **Scope:** Read tests and source; append findings only to `docs/tests/uncovered.md`; do not modify other files.
+
 ### ✅ Implement First Gap
 > Open `docs/tests/uncovered.md`, pick the first unchecked item, implement targeted test(s) to cover it, and mark the item as checked (- [x]) once verified. Avoid touching production code.  
 > **Scope:** Modify only test directories and `docs/tests/uncovered.md`; do not change source files or other docs.
-
-### ✅ Assess Test Suite Effectiveness
-> Evaluate the presence, structure, and effectiveness of unit, integration, and end-to-end tests. Highlight edge cases, error paths, and failure handling lacking coverage; report findings in this output only.  
-> **Scope:** Read-only across tests and source code; do not create or modify any files.
-
-### ✅ Coverage Expansion Plan
-> Design a phased plan to increase coverage using existing testing frameworks and patterns. Order phases from low-effort/high-impact to more complex areas, covering unit, integration, UI, edge, and failure cases.  
-> **Scope:** Planning only; produce the plan in this output; do not edit the repository.
-
-### ✅ Implement Coverage Plan Phase
-> Implement the current phase of the coverage plan by adding stable, repeatable tests for core logic, edge cases, and failure scenarios using established conventions. If running tests, limit execution to the affected subset.  
-> **Scope:** Modify only test files per existing architecture and conventions; avoid new dependencies and production code changes.
