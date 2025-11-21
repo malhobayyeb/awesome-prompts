@@ -14,13 +14,13 @@
 > Write a precise checklist of uncovered logic paths, business rules, and edge cases to `docs/tests/uncovered.md` using markdown checkboxes (- [ ]). Make each item specific and actionable.  
 > **Scope:** Only write to `docs/tests/uncovered.md`; do not create or edit any other files.
 
-### ✅ Validate Uncovered Log
-> Read `docs/tests/uncovered.md`, cross-check each entry against existing tests, and remove items already fully covered so only real gaps remain.  
-> **Scope:** Only modify `docs/tests/uncovered.md`; no other file changes.
-
 ### ✅ Assess Test Suite Effectiveness
 > Evaluate the presence, structure, and effectiveness of unit, integration, and end-to-end tests. Add any uncovered edge cases, error paths, and failure handling gaps as new checklist items in `docs/tests/uncovered.md`.  
 > **Scope:** Read tests and source; append findings only to `docs/tests/uncovered.md`; do not modify other files.
+
+### ✅ Validate Uncovered Log
+> Read `docs/tests/uncovered.md`, cross-check each entry against existing tests, and remove items already fully covered so only real gaps remain.  
+> **Scope:** Only modify `docs/tests/uncovered.md`; no other file changes.
 
 ### ✅ Implement First Gap
 > Open `docs/tests/uncovered.md`, pick the first unchecked item, implement targeted test(s) to cover it, and mark the item as checked (- [x]) once verified. Avoid touching production code.  
