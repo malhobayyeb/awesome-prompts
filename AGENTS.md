@@ -3,8 +3,8 @@
 This document defines how CLI-based agents should behave inside the `awesome-prompts` repository.
 
 It covers both:
-1. 📐 Prompt structure and file layout
-2. 🧠 How to generate high-quality, optimized prompts — as done by Prompt Optimizer
+- 📐 Prompt structure and file layout
+- 🧠 How to generate high-quality, optimized prompts — as done by Prompt Optimizer
 
 ---
 
@@ -31,6 +31,10 @@ Each prompt should follow this exact Markdown layout:
 
 > [Direct, precise instruction]  
 > **Scope:** [What can be read/modified/ignored? What folder boundaries must be respected?]
+
+```
+
+Use this layout exactly whenever you add or update prompts in this repo.
 
 🧠 How to Think Like Prompt Optimizer
 
@@ -147,13 +151,8 @@ Instead, use direct, declarative language.
 🧠 Summary
 
 Agents must:
-
-Follow strict formatting
-
-Use concise, directive language
-
-Declare scope and purpose in every prompt
-
-Think like a professional prompt engineer, not a chatbot
-
-Reuse structure, style, and quality from Prompt Optimizer
+- Follow strict formatting
+- Use concise, directive language
+- Declare scope and purpose in every prompt
+- Think like a professional prompt engineer, not a chatbot
+- Reuse structure, style, and quality from Prompt Optimizer
