@@ -34,9 +34,9 @@
 
 | Path | Description |
 | --- | --- |
-| `kmp/prompts.md` | Gap analysis + remediation workflow for Kotlin Multiplatform projects (shared + platform tests). |
-| `laravel/prompts.md` | Laravel-centric checklist covering test scans, source parity checks, uncovered tracking, and implementation. |
-| `requirements/prompts.md` | Documentation-first routine that derives agile requirements, fills gaps, tags coverage, and summarizes for stakeholders. |
+| `kmp/README.md` | Gap analysis + remediation workflow for Kotlin Multiplatform projects (shared + platform tests). |
+| `laravel/README.md` | Laravel-centric checklist covering test scans, source parity checks, uncovered tracking, and implementation. |
+| `requirements/README.md` | Documentation-first routine that derives agile requirements, fills gaps, tags coverage, and summarizes for stakeholders. |
 | `.gitignore` | Keeps IDE, build, vendor, and environment clutter out of version control. |
 | `README.md` | You are here—high-level guidance, badges, and usage tips. |
 
@@ -73,7 +73,7 @@
 cd kmp   # or laravel / requirements
 
 # 2. Open the optimized prompt list
-bat prompts.md
+bat README.md
 
 # 3. Follow each prompt in order
 #    - Respect the scope/writing restrictions
@@ -91,7 +91,7 @@ Tips:
 
 ## Customization ideas
 
-- **Add language tracks** – Drop in `flutter/`, `rails/`, or other stacks following the same `prompts.md` contract.
+- **Add language tracks** – Drop in `flutter/`, `rails/`, or other stacks following the same README-based prompt contract.
 - **Parameterize scopes** – Use templating (e.g., `{{test_dir}}`) if you plan to auto-generate prompts per project.
 - **Badge automation** – Hook up GitHub Actions to auto-update status badges (tests, lint, docs) referenced above.
 - **Docs sync** – Point `docs/tests/*.md` to a knowledge base or wiki if you need richer collaboration.
