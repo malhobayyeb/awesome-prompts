@@ -10,7 +10,7 @@
 ![Docs Coverage](https://img.shields.io/badge/docs-100%25-blueviolet?style=flat-square)
 ![Made with Markdown](https://img.shields.io/badge/made%20with-Markdown-1f425f.svg)
 
-> A curated collection of prompt playbooks that guide AI agents through rigorous testing and requirements-discovery workflows for Kotlin Multiplatform (KMP), Laravel, and documentation-first projects.
+> A curated collection of prompt playbooks that guide AI agents through rigorous testing and requirements-discovery workflows across whatever stacks you need.
 
 ## Table of Contents
 
