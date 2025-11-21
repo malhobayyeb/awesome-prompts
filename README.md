@@ -34,29 +34,29 @@
 
 | Path | Description |
 | --- | --- |
-| `kmp/README.md` | Gap analysis + remediation workflow for Kotlin Multiplatform projects (shared + platform tests). |
-| `laravel/README.md` | Laravel-centric checklist covering test scans, source parity checks, uncovered tracking, and implementation. |
-| `requirements/README.md` | Documentation-first routine that derives agile requirements, fills gaps, tags coverage, and summarizes for stakeholders. |
+| `TESTING.md` | Universal testing and QA workflows for mapping suites, logging gaps, and implementing coverage. |
+| `ARCHITECTURE.md` | Clean architecture refactor guidance plus system comprehension and coverage assessment prompts. |
+| `REQUIREMENTS.md` | Documentation-first routine that derives agile requirements, fills gaps, tags coverage, and summarizes for stakeholders. |
+| `STATIC_ANALYSIS.md` | Static analysis workflows for inventory, baseline reporting, triage, and remediation. |
 | `.gitignore` | Keeps IDE, build, vendor, and environment clutter out of version control. |
 | `README.md` | You are here—high-level guidance, badges, and usage tips. |
 
 ## Workflow deep dive
 
-### KMP Playbook Highlights
+### Testing & QA Highlights
 
-1. **Test surface scan** – Inspect `commonTest`, `androidTest`, `iosTest`, etc., to understand coverage breadth.
-2. **Source cross-check** – Align each major logic path or state machine with existing tests to detect gaps.
-3. **Gap log** – Write actionable TODOs to `docs/tests/uncovered.md` in markdown task format.
-4. **Validation loop** – Confirm items, prune false positives, and leave only real coverage needs.
-5. **Targeted implementation** – Implement the first unchecked test-only scenario and mark it complete.
+1. **Test suite survey** – Map unit, integration, end-to-end, and UI suites for structure and themes.
+2. **Source cross-check** – Align code paths and behaviors against existing tests to spot gaps.
+3. **Gap log** – Record uncovered cases in `docs/tests/uncovered.md` with actionable checkboxes.
+4. **Validation loop** – Reconcile the log with current tests and prune any false positives.
+5. **Targeted implementation** – Implement and verify the first unchecked gap, then mark it complete.
 
-### Laravel Playbook Highlights
+### Architecture Playbook Highlights
 
-1. **`tests/` recon** – Map feature/HTTP/unit buckets, naming conventions, and helper traits.
-2. **Business logic comparison** – Read application code (excluding Nova) to spot missing cases.
-3. **`tests/uncovered.md` tracker** – Document uncovered cases as checkboxes for future sprints.
-4. **Verification + cleanup** – Cross-check items with existing coverage and remove duplicates.
-5. **Incremental delivery** – Implement the first outstanding item, run targeted tests, and mark it done.
+1. **Clean architecture refactor** – Enforce layer boundaries, inversion, and repository abstractions without altering behavior or adding dependencies.
+2. **Version control action** – Commit the refactor with a descriptive message on the current branch.
+3. **System comprehension** – Read and model structure, logic flows, coupling points, and external dependencies.
+4. **Coverage and robustness review** – Assess tests, data flow, control paths, and error handling; surface brittle areas.
 
 ### Requirements Playbook Highlights
 
@@ -70,10 +70,10 @@
 
 ```bash
 # 1. Pick your target domain
-cd kmp   # or laravel / requirements
+open TESTING.md   # or ARCHITECTURE.md / REQUIREMENTS.md / STATIC_ANALYSIS.md
 
 # 2. Open the optimized prompt list
-bat README.md
+bat TESTING.md
 
 # 3. Follow each prompt in order
 #    - Respect the scope/writing restrictions
