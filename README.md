@@ -8,10 +8,9 @@
 ![Last Commit](https://img.shields.io/github/last-commit/mohammadalhobayyeb/awesome-prompts?style=flat-square)
 ![License](https://img.shields.io/badge/license-TBD-lightgrey?style=flat-square)
 ![Docs Coverage](https://img.shields.io/badge/docs-100%25-blueviolet?style=flat-square)
-![Platforms](https://img.shields.io/badge/platforms-KMP%20%7C%20Laravel%20%7C%20Requirements-informational?style=flat-square)
 ![Made with Markdown](https://img.shields.io/badge/made%20with-Markdown-1f425f.svg)
 
-> A curated collection of prompt playbooks that guide engineers or AI copilots through rigorous testing and requirements-discovery workflows for Kotlin Multiplatform (KMP), Laravel, and documentation-first projects.
+> A curated collection of prompt playbooks that guide AI agents through rigorous testing and requirements-discovery workflows for Kotlin Multiplatform (KMP), Laravel, and documentation-first projects.
 
 ## Table of Contents
 
@@ -111,7 +110,7 @@ _Need inspiration?_ Open an issue with the stack you’d like covered, and we ca
 
 - [ ] Expand coverage beyond KMP/Laravel (e.g., React Native, Next.js).
 - [ ] Provide sample `docs/tests/uncovered.md` and `agile-requirements.md` templates.
-- [ ] Add automation scripts that feed prompts directly to AI copilots.
+- [ ] Add automation scripts that feed prompts directly to AI agents.
 - [ ] Publish a website showcasing each workflow with collapsible sections.
 
 ## Acknowledgements
