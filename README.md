@@ -4,33 +4,55 @@
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 ![PRs](https://img.shields.io/badge/PRs-welcome-blue.svg)
 
-> A modular library of prompt workflows for engineering tasks—repeatable, scope-bound, and ready for AI or human agents.
+> Modular prompt workflows for engineering tasks—repeatable, scope-bound, and ready for AI or human agents.
+
+## Table of Contents
+- [Why This Exists](#why-this-exists)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Why This Exists
-Engineering teams need prompts that are specific, deterministic, and safe to run in real repos. This collection packages common workflows (testing, requirements, static analysis, architecture) into clear, stepwise playbooks with explicit scopes.
+Teams need prompts that are specific, deterministic, and safe to run in real repos. This library packages common workflows (testing, requirements, static analysis, architecture) into numbered playbooks with explicit scopes and outputs.
 
-## Prompt Packs
-- `TESTING.md` — map test suites, log uncovered scenarios, and close coverage gaps.  
-- `REQUIREMENTS.md` — reverse-engineer code/tests into agile requirements with early non-functional capture.  
-- `STATIC_ANALYSIS.md` — inventory linters/tools, baseline findings, plan and execute remediations.  
-- `ARCHITECTURE.md` — map flows and dependencies, capture risks, and enforce architectural quality.
+## Features
+- Scope-bound workflows with explicit read/write rules per step.  
+- Coverage of testing, requirements reverse-engineering, static analysis, and architecture review.  
+- Deterministic, repeatable prompts suitable for AI or human operators.  
+- Early non-functional requirements capture baked into the flow.  
+- No runtime dependencies—everything is Markdown.
 
 ## Getting Started
-1. Open the relevant prompt pack and follow the numbered steps in order.  
-2. Respect each step’s **Scope** (read/write boundaries and allowed files).  
-3. Save outputs to the specified doc paths to keep results repeatable and auditable.
+1. Pick the prompt pack that matches your task.  
+2. Follow the numbered steps in order.  
+3. Respect each step’s **Scope** to avoid unintended changes.  
+4. Save outputs to the specified doc paths to keep work auditable.
 
-## Documentation
-- Standards and formatting: `AGENTS.md`.  
-- Testing workflow: `TESTING.md`.  
-- Requirements reverse-engineering: `REQUIREMENTS.md`.  
-- Static analysis: `STATIC_ANALYSIS.md`.  
-- Architecture review: `ARCHITECTURE.md`.
+## Usage
+- Testing: `TESTING.md` — map suites, log uncovered scenarios, and close gaps.  
+- Requirements: `REQUIREMENTS.md` — reverse-engineer code/tests into agile requirements with NFRs.  
+- Static analysis: `STATIC_ANALYSIS.md` — inventory tools, baseline findings, plan and remediate.  
+- Architecture: `ARCHITECTURE.md` — map flows/dependencies, capture risks, and enforce boundaries.  
+- Standards: `AGENTS.md` — formatting and prompt-engineering rules for this repo.
+
+## Project Structure
+```
+AGENTS.md            # Prompt structure and engineering standards
+ARCHITECTURE.md      # Architecture workflow
+LICENSE              # Public domain dedication
+README.md            # Project overview (this file)
+REQUIREMENTS.md      # Requirements reverse-engineering workflow
+STATIC_ANALYSIS.md   # Static analysis workflow
+TESTING.md           # Testing and coverage workflow
+```
 
 ## Contributing
-- Follow the prompt-engineering rules in `AGENTS.md`.  
+- Follow the formatting and prompt rules in `AGENTS.md`.  
 - Keep prompts actionable, explicit, and deterministic.  
-- Submit focused PRs; avoid adding non-prompt artifacts or dependencies.
+- Submit small, focused PRs; avoid adding dependencies or non-prompt artifacts.
 
 ## License
-Public domain dedication for prompt content (see `LICENSE`). Use, adapt, and redistribute freely.***
+Public domain dedication for prompt content (see `LICENSE`). Use, adapt, and redistribute freely.
