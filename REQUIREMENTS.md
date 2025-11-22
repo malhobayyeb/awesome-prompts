@@ -1,7 +1,7 @@
 # Requirements Prompt Pack
 
 ## Workflow
-Run steps 1️⃣–7️⃣ once to build the baseline requirements; repeat 8️⃣ to maintain and refine updates as the system evolves.
+Run steps 1️⃣–7️⃣ once to build the baseline requirements; repeat 8️⃣–🔟 to maintain non-functional coverage and roadmap alignment as the system evolves.
 
 ### 1️⃣ Map Behaviors From Tests
 > Analyze all test files (unit, integration, feature, system) to infer validated behaviors, business rules, user interactions, and system flows. Capture high-level functional requirements implied by the tests.  
@@ -31,6 +31,14 @@ Run steps 1️⃣–7️⃣ once to build the baseline requirements; repeat 8️
 > Identify source or test code not represented by any epic or story and log it in `docs/tests/agile-requirements.md` with recommendations (remove, document, or integrate).  
 > **Scope:** Read code and tests; only write to `docs/tests/agile-requirements.md`; do not modify code or tests.
 
-### 8️⃣ Refine and Normalize Requirements
+### 8️⃣ Capture Non-Functional Requirements
+> Extract performance, reliability, security, scalability, observability, and accessibility requirements from code, configuration, infrastructure definitions, and test artifacts. Add them to a Non-Functional Requirements section in `docs/tests/agile-requirements.md` with measurable criteria where possible.  
+> **Scope:** Read code, tests, configs, and infra definitions; only write to `docs/tests/agile-requirements.md`; do not change other files.
+
+### 9️⃣ Align With Roadmap Signals
+> Cross-check `docs/tests/agile-requirements.md` against roadmap or planning artifacts (e.g., product docs in `docs/`, backlog files, release plans) to ensure every planned deliverable has a mapped epic and user stories. Add any missing items or discrepancies to `docs/tests/agile-requirements.md` with clear acceptance signals.  
+> **Scope:** Read roadmap/backlog artifacts alongside code and tests; only update `docs/tests/agile-requirements.md`; do not modify other files.
+
+### 🔟 Refine and Normalize Requirements
 > Review `docs/tests/agile-requirements.md` to merge duplicates, clarify vague language, enforce consistent formatting, and reorder for logical flow so each epic is cohesive.  
 > **Scope:** Only edit `docs/tests/agile-requirements.md`; no other files.
