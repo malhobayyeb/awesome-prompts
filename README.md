@@ -4,7 +4,7 @@
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 ![PRs](https://img.shields.io/badge/PRs-welcome-blue.svg)
 
-> Modular prompt workflows for engineering tasks—repeatable, scope-bound, and ready for AI or human agents.
+> Modular prompt workflows for engineering tasks—repeatable, scope-bound, and tuned for AI agents.
 
 ## Table of Contents
 - [Why This Exists](#why-this-exists)
@@ -16,18 +16,18 @@
 - [License](#license)
 
 ## Why This Exists
-Teams need prompts that are specific, deterministic, and safe to run in real repos. This library packages common workflows (testing, requirements, static analysis, architecture) into numbered playbooks with explicit scopes and outputs.
+Teams need AI prompts that are specific, deterministic, and safe to run in real repos. This library packages common workflows (testing, requirements, static analysis, architecture) into numbered playbooks with explicit scopes and outputs for automated agents.
 
 ## Features
 - Scope-bound workflows with explicit read/write rules per step.  
 - Coverage of testing, requirements reverse-engineering, static analysis, and architecture review.  
-- Deterministic, repeatable prompts suitable for AI or human operators.  
+- Deterministic, repeatable prompts tuned for AI agents.  
 - Early non-functional requirements capture baked into the flow.  
 - No runtime dependencies—everything is Markdown.
 
 ## Getting Started
 1. Pick the prompt pack that matches your task.  
-2. Follow the numbered steps in order.  
+2. Load the steps into your AI agent and execute in order.  
 3. Respect each step’s **Scope** to avoid unintended changes.  
 4. Save outputs to the specified doc paths to keep work auditable.
 
