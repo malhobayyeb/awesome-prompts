@@ -1,113 +1,44 @@
-## Prompts
+# Requirements Prompt Pack
 
-✅ Prompt 1 – Scan all test files to infer system behaviors
+## Workflow
+Run steps 1️⃣–7️⃣ once to build the baseline requirements; repeat 8️⃣–🔟 to maintain and communicate updates as the system evolves.
 
-```md
-Analyze all test files across the project—unit, integration, feature, or system tests.
-Identify what each test validates in terms of business logic, user interaction, or system behavior.
-Extract high-level insights about functional requirements implied by the existing tests.
-Scope: Read-only access to test files. Do not modify or generate new tests. Respect .gitignore or any project-specific exclusion rules.
-```
+### 1️⃣ Map Behaviors From Tests
+> Analyze all test files (unit, integration, feature, system) to infer validated behaviors, business rules, user interactions, and system flows. Capture high-level functional requirements implied by the tests.  
+> **Scope:** Read-only access to all test directories; respect ignore settings; do not modify tests.
 
-✅ Prompt 2 – Analyze source code to understand the system
+### 2️⃣ Analyze Source for Implemented Features
+> Explore source modules to understand implemented features, domain logic, UI/UX flows, validation, and service interactions. Document notable behaviors and constraints.  
+> **Scope:** Read-only access to source code; respect ignore settings; do not create or modify files.
 
-```md
-Explore the source code of the application to understand how it works, what it does, and what features it implements.
-Focus on core components such as logic modules, UI flows, service layers, state management, validation logic, and any domain-specific behaviors.
-Scope: Read-only access to source code. Do not modify or create any files. Respect ignore rules.
-```
+### 3️⃣ Draft Agile Requirements Doc
+> Create `docs/tests/agile-requirements.md` with Epics and grouped user stories formatted as "As a [role], I want to [action] so that [outcome]." Base content on findings from tests and source.  
+> **Scope:** Only write to `docs/tests/agile-requirements.md`; do not change other files.
 
-✅ Prompt 3 – Generate initial Agile epics and user stories
+### 4️⃣ Surface Missing or Implicit Requirements
+> Compare the drafted requirements against observed functionality to find behaviors or logic paths not yet documented. Add these gaps to `docs/tests/agile-requirements.md` as new epics or stories.  
+> **Scope:** Read code and tests; append only to `docs/tests/agile-requirements.md`; do not edit other files.
 
-```md
-Based on the understanding of tests and source code, create a structured file called docs/tests/agile-requirements.md containing:
+### 5️⃣ Expand Requirements for Gaps
+> For each uncovered behavior, author precise user stories (and epics if needed) and append them under the appropriate sections in `docs/tests/agile-requirements.md`, ensuring no redundancy.  
+> **Scope:** Only modify `docs/tests/agile-requirements.md`; no other files.
 
-Epics: Major themes or functional domains
+### 6️⃣ Tag Coverage Status
+> For every user story in `docs/tests/agile-requirements.md`, determine implementation and test coverage status (e.g., ✅ implemented, 🧪 tested, ❌ missing) and annotate accordingly.  
+> **Scope:** Read-only access to code and tests; only update `docs/tests/agile-requirements.md`.
 
-User Stories: Written in the format:
-"As a [user type], I want to [do something] so that [value achieved]."
-Group user stories under their relevant epics. Ensure each story is focused, testable, and actionable.
-Scope: Only write to docs/tests/agile-requirements.md. Do not create or modify any other files.
-```
+### 7️⃣ Detect Orphaned Functionality
+> Identify source or test code not represented by any epic or story and log it in `docs/tests/agile-requirements.md` with recommendations (remove, document, or integrate).  
+> **Scope:** Read code and tests; only write to `docs/tests/agile-requirements.md`; do not modify code or tests.
 
-✅ Prompt 4 – Identify missing or implicit requirements
+### 8️⃣ Refine and Normalize Requirements
+> Review `docs/tests/agile-requirements.md` to merge duplicates, clarify vague language, enforce consistent formatting, and reorder for logical flow so each epic is cohesive.  
+> **Scope:** Only edit `docs/tests/agile-requirements.md`; no other files.
 
-```md
-Compare the generated requirements with actual system functionality. Identify any behaviors, workflows, or logic paths that are implemented but not yet described in the user stories.
-These represent gaps between reality and documented intent.
-Scope: Read-only access to code and tests. Only update agile-requirements.md with newly discovered requirements.
-```
+### 9️⃣ Annotate Metadata (Optional)
+> Add optional metadata to user stories—milestones, priority (High/Medium/Low), and responsible team—using consistent formatting without clutter.  
+> **Scope:** Only update `docs/tests/agile-requirements.md`; do not change code or tests.
 
-✅ Prompt 5 – Add missing epics or stories to the requirements file
-
-```md
-For each uncovered behavior or logic gap, write new user stories (and epics if needed).
-Append them to docs/tests/agile-requirements.md under appropriate sections.
-Ensure the new stories follow consistent formatting and are not redundant with existing ones.
-Scope: Only edit docs/tests/agile-requirements.md. Do not change any other files.
-```
-
-✅ Prompt 6 – Cross-check each story for implementation or test coverage
-
-```md
-For every user story in agile-requirements.md, determine if it is:
-
-Fully implemented in code
-
-Covered by an existing test
-
-Partially implemented
-
-Not implemented at all
-Optionally, tag each story with a status (e.g., ✅ implemented, ❌ missing, 🧪 tested only).
-Scope: Read-only access to code and tests. Only modify agile-requirements.md for tagging.
-```
-
-✅ Prompt 7 – Detect orphaned code not linked to any story
-
-```md
-Find any parts of the source code or tests that are not referenced by any user story or epic.
-List these as orphaned or undocumented functionality. Suggest whether they should be removed, explained, or integrated into a new story.
-Scope: Read-only access to code and tests. Only write summary findings or updates to agile-requirements.md.
-```
-
-✅ Prompt 8 – Refactor and organize requirements
-
-```md
-Review the full contents of docs/tests/agile-requirements.md.
-
-Merge duplicates
-
-Clarify vague wording
-
-Ensure consistent format
-
-Reorder for logical flow
-
-Ensure each Epic has a clear theme
-The final result should be clean, understandable by stakeholders, and useful for developers and testers.
-Scope: Only modify docs/tests/agile-requirements.md. No changes outside this file.
-```
-
-✅ Prompt 9 – (Optional) Annotate stories with priorities or milestones
-
-```md
-Add optional metadata to each user story to reflect:
-
-📅 Planned milestone / release
-
-🔼 Priority (High / Medium / Low)
-
-👥 Responsible team
-Use consistent formatting and avoid clutter.
-Scope: Only update docs/tests/agile-requirements.md. Do not modify any code or test files.
-```
-
-✅ Prompt 10 – Generate summary for product or QA teams
-
-```md
-Generate a summary of all Epics and User Stories in agile-requirements.md, organized for non-developers.
-Format should be readable by Product Owners, QA Engineers, and business stakeholders.
-Optionally, export in simplified markdown or CSV format.
-Scope: Only read agile-requirements.md. Output formatted summary separately.
-```
+### 🔟 Summarize for Stakeholders
+> Generate a concise stakeholder-friendly summary of all epics and user stories from `docs/tests/agile-requirements.md`, optionally exporting to a separate markdown or CSV artifact for product/QA consumption.  
+> **Scope:** Read-only access to `docs/tests/agile-requirements.md`; write summaries only to explicitly specified output paths; do not modify other files.
