@@ -19,18 +19,18 @@ Run steps 1️⃣–7️⃣ once to build the baseline requirements; repeat 8️
 > Compare the drafted requirements against observed functionality to find behaviors or logic paths not yet documented. Add each gap to `docs/tests/agile-requirements.md` as a fully formed epic or user story (no placeholders), ensuring specificity and no redundancy.  
 > **Scope:** Read code and tests; only modify `docs/tests/agile-requirements.md`; do not edit other files.
 
-### 6️⃣ Tag Coverage Status
+### 5️⃣ Tag Coverage Status
 > For every user story in `docs/tests/agile-requirements.md`, determine implementation and test coverage status (e.g., ✅ implemented, 🧪 tested, ❌ missing) and annotate accordingly.  
 > **Scope:** Read-only access to code and tests; only update `docs/tests/agile-requirements.md`.
 
-### 7️⃣ Detect Orphaned Functionality
+### 6️⃣ Detect Orphaned Functionality
 > Identify source or test code not represented by any epic or story and log it in `docs/tests/agile-requirements.md` with recommendations (remove, document, or integrate).  
 > **Scope:** Read code and tests; only write to `docs/tests/agile-requirements.md`; do not modify code or tests.
 
-### 8️⃣ Capture Non-Functional Requirements
+### 7️⃣ Capture Non-Functional Requirements
 > Extract performance, reliability, security, scalability, observability, and accessibility requirements from code, configuration, infrastructure definitions, and test artifacts. Add them to a Non-Functional Requirements section in `docs/tests/agile-requirements.md` with measurable criteria where possible.  
 > **Scope:** Read code, tests, configs, and infra definitions; only write to `docs/tests/agile-requirements.md`; do not change other files.
 
-### 9️⃣ Refine and Normalize Requirements
+### 8️⃣ Refine and Normalize Requirements
 > Review `docs/tests/agile-requirements.md` to merge duplicates, clarify vague language, enforce consistent formatting, and reorder for logical flow so each epic is cohesive.  
 > **Scope:** Only edit `docs/tests/agile-requirements.md`; no other files.
