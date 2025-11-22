@@ -30,28 +30,24 @@ Run steps 1️⃣–5️⃣ once to map and validate gaps; repeat 6️⃣ until 
 # Test Architecture & Patterns Prompt Pack
 
 ## Workflow
-Run steps 1️⃣–3️⃣ once to capture the architecture backlog inside `docs/tests/architecture.md`; repeat 4️⃣–6️⃣ for each backlog item until every checkbox in that file is complete.
+Run steps 1️⃣–4️⃣ once to capture only confirmed drifts inside `docs/tests/drifts.md`; repeat 5️⃣ until the checklist is empty.
 
-### 1️⃣ Audit Test Architecture
-> Scan all test directories (unit, integration, e2e, UI, contract) to map folder layout, fixture layering, helper modules, mocking boundaries, data builders, and naming conventions. Flag spots where suites deviate from deterministic, isolated, and DRY best practices.  
-> **Scope:** Read-only access to all test directories and shared test utilities; do not modify files.
+### 1️⃣ Audit Established Architecture
+> Read existing architecture guardrails, prior refactor notes, and the current test suites (unit, integration, e2e, UI, contract) to understand the approved patterns, principles, practices, and standards before spotting issues.  
+> **Scope:** Read-only access to guardrail docs and all test directories; do not modify files.
 
-### 2️⃣ Capture DRY Gaps in One Doc
-> Open (or create) `docs/tests/architecture.md` and list every duplicated setup, fixture drift, or brittle pattern as individual checkbox entries with file paths and desired outcomes. Keep all actionable items in this single file; no need to restate guardrails.  
-> **Scope:** Update only `docs/tests/architecture.md`; leave other files untouched.
+### 2️⃣ Detect Architecture Drifts
+> Compare the established standards from step 1 against the live tests to locate every deviation (duplicated setups, fixture misuse, naming drift, brittle helpers, etc.). Capture supporting evidence and affected paths.  
+> **Scope:** Read-only access to test directories and shared test utilities.
 
-### 3️⃣ Prioritize the Backlog
-> Inside `docs/tests/architecture.md`, group and order the backlog entries by suite, risk, and effort so anyone can tackle them sequentially. Annotate dependencies between items to avoid conflicting refactors.  
-> **Scope:** Update only `docs/tests/architecture.md`; leave other files untouched.
+### 3️⃣ Log Drifts as Actionable Items
+> Record each drift in `docs/tests/drifts.md` as an unchecked checklist entry (- [ ]) that describes the issue, target files, and desired corrective action. Keep all actionable backlog items in this single file.  
+> **Scope:** Modify only `docs/tests/drifts.md`; do not edit other files.
 
-### 4️⃣ Implement First Backlog Entry (Repeatable)
-> Open `docs/tests/architecture.md`, grab the first unchecked backlog item, and refactor the referenced tests to reuse shared helpers, align naming, or restructure folders according to the guardrails. Do not modify production code or non-test docs.  
-> **Scope:** Edit only the affected test directories and shared test utilities referenced by the backlog item; no application source changes.
+### 4️⃣ Validate Real Drifts
+> Re-read `docs/tests/drifts.md` and confirm each entry is a true deviation. Remove any false positives so the checklist reflects only real drifts ready for implementation.  
+> **Scope:** Update only `docs/tests/drifts.md`; no other file changes.
 
-### 5️⃣ Mark Progress in the Same Doc
-> After refactoring, return to `docs/tests/architecture.md`, mark the backlog item as checked (- [x]), and jot a short note on what changed and which suites were touched so the file stays the single source of truth.  
-> **Scope:** Update only `docs/tests/architecture.md`; no other doc edits.
-
-### 6️⃣ Verify Against Guardrails
-> Run the impacted test suites, confirm the new structure honors the remembered guardrails, and jot a short verification note beneath the corresponding backlog entry in `docs/tests/architecture.md`.  
-> **Scope:** Read/execute tests as needed; modify only `docs/tests/architecture.md` when documenting verification.
+### 5️⃣ Implement First Drift (Repeatable)
+> Take the first unchecked drift from `docs/tests/drifts.md`, refactor the referenced tests to eliminate the issue, run the relevant suites, then mark the checklist item as checked (- [x]) with a short verification note. Avoid touching production (non-test) code.  
+> **Scope:** Modify only the affected test directories, shared test utilities, and `docs/tests/drifts.md`; keep application source files untouched.
