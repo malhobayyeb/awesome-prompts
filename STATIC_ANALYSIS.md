@@ -1,18 +1,18 @@
 # Static Analysis Prompt Pack
 
 ## Workflow
-Run steps 1️⃣–5️⃣ once to establish the baseline; repeat 6️⃣–7️⃣ until the remediation plan is complete.
+Run steps 1️⃣–4️⃣ once to inventory and log findings; repeat 5️⃣–6️⃣ to remediate and track progress.
 
 ### 1️⃣ Inventory Static Analysis Setup
 > Identify all static analysis tools, linters, formatters, and type checkers configured in the project. Locate config files, ignore lists, and custom rules. Summarize tool versions and entry points.  
 > **Scope:** Read-only across the repository; respect ignore settings; do not modify configs or code.
 
-### 2️⃣ Establish Baseline Report
-> Run the configured static analysis tools using the project’s checked-in settings to produce a current-state report. Persist results to `docs/static-analysis/baseline.md`, including commands, timestamp, and summarized findings.  
-> **Scope:** Execute tools; respect ignore settings; write only to `docs/static-analysis/baseline.md`; do not change source or configs.
+### 2️⃣ Run Static Analysis
+> Execute the configured static analysis tools using the project’s checked-in settings. Capture commands, timestamp, and summarized findings.  
+> **Scope:** Execute tools; respect ignore settings; log results only in `docs/static-analysis/findings.md`; do not change source or configs.
 
 ### 3️⃣ Classify Findings
-> Categorize baseline findings by severity, area, and type (correctness, security, performance, style). Flag probable false positives separately. Record all actionable items as markdown checkboxes in `docs/static-analysis/findings.md`.  
+> Categorize findings by severity, area, and type (correctness, security, performance, style). Flag probable false positives separately. Record all actionable items as markdown checkboxes in `docs/static-analysis/findings.md`.  
 > **Scope:** Read reports and code as needed; respect ignore settings; write only to `docs/static-analysis/findings.md`.
 
 ### 4️⃣ Map Suppressions and Ignores
