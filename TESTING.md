@@ -33,7 +33,7 @@ Run steps 1️⃣–5️⃣ once to map and validate gaps; repeat 6️⃣ until 
 Run steps 1️⃣–4️⃣ once to capture only confirmed drifts inside `docs/tests/drifts.md`; repeat 5️⃣ until the checklist is empty.
 
 ### 1️⃣ Audit Established Architecture
-> Read the documented testing standards and the current test suites (unit, integration, e2e, UI, contract) to understand the approved patterns, principles, practices, and standards before spotting issues.  
+> Read the documented testing standards and the current test suites (unit, integration, e2e, UI, contract) to understand the expected patterns, principles, practices, and standards before spotting issues.  
 > **Scope:** Read-only access to guardrail docs and all test directories; do not modify files.
 
 ### 2️⃣ Detect Architecture Drifts
