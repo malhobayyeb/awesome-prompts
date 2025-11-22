@@ -15,13 +15,9 @@ Run steps 1️⃣–7️⃣ once to build the baseline requirements; repeat 8️
 > Create `docs/tests/agile-requirements.md` with Epics and grouped user stories formatted as "As a [role], I want to [action] so that [outcome]." Base content on findings from tests and source.  
 > **Scope:** Only write to `docs/tests/agile-requirements.md`; do not change other files.
 
-### 4️⃣ Surface Missing or Implicit Requirements
-> Compare the drafted requirements against observed functionality to find behaviors or logic paths not yet documented. Add these gaps to `docs/tests/agile-requirements.md` as new epics or stories.  
-> **Scope:** Read code and tests; append only to `docs/tests/agile-requirements.md`; do not edit other files.
-
-### 5️⃣ Expand Requirements for Gaps
-> For each uncovered behavior, author precise user stories (and epics if needed) and append them under the appropriate sections in `docs/tests/agile-requirements.md`, ensuring no redundancy.  
-> **Scope:** Only modify `docs/tests/agile-requirements.md`; no other files.
+### 4️⃣ Capture and Expand Missing Requirements
+> Compare the drafted requirements against observed functionality to find behaviors or logic paths not yet documented. Add each gap to `docs/tests/agile-requirements.md` as a fully formed epic or user story (no placeholders), ensuring specificity and no redundancy.  
+> **Scope:** Read code and tests; only modify `docs/tests/agile-requirements.md`; do not edit other files.
 
 ### 6️⃣ Tag Coverage Status
 > For every user story in `docs/tests/agile-requirements.md`, determine implementation and test coverage status (e.g., ✅ implemented, 🧪 tested, ❌ missing) and annotate accordingly.  
