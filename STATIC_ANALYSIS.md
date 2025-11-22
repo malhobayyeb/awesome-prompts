@@ -23,8 +23,8 @@ Run steps 1️⃣–5️⃣ once to establish the baseline; repeat 6️⃣–7�
 > Create an ordered remediation list grouped by severity and effort. Keep all actionable items as markdown checkboxes in `docs/static-analysis/findings.md`, marking priority and ownership if applicable.  
 > **Scope:** Planning only; write to `docs/static-analysis/findings.md`; do not modify code or configs.
 
-### 6️⃣ Implement First Remediation Batch (Repeatable)
-> Apply fixes for the top-priority or quick-win items from `docs/static-analysis/findings.md`, keeping changes minimal and behavior-preserving. Remove unnecessary suppressions tied to the fixed issues and check off completed items.  
+### 6️⃣ Implement First Remediation Item (Repeatable)
+> Open `docs/static-analysis/findings.md`, take the top unchecked item, apply the fix with minimal, behavior-preserving changes, remove any related suppressions, and mark the item as checked when verified.  
 > **Scope:** Modify only affected source/test files and related suppressions; avoid dependency changes; keep behavior unchanged.
 
 ### 7️⃣ Re-run and Verify (Repeatable)
