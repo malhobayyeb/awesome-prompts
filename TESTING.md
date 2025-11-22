@@ -30,28 +30,28 @@ Run steps 1️⃣–5️⃣ once to map and validate gaps; repeat 6️⃣ until 
 # Test Architecture & Patterns Prompt Pack
 
 ## Workflow
-Run steps 1️⃣–4️⃣ once to define architecture guardrails; repeat 5️⃣–6️⃣ until every refactor in `docs/tests/refactors.md` is complete.
+Run steps 1️⃣–3️⃣ once to codify guardrails and backlog inside `docs/tests/architecture.md`; repeat 4️⃣–6️⃣ for each backlog item until every checkbox in that file is complete.
 
 ### 1️⃣ Audit Test Architecture
 > Scan all test directories (unit, integration, e2e, UI, contract) to map folder layout, fixture layering, helper modules, mocking boundaries, data builders, and naming conventions. Flag spots where suites deviate from deterministic, isolated, and DRY best practices.  
 > **Scope:** Read-only access to all test directories and shared test utilities; do not modify files.
 
-### 2️⃣ Define Architecture Guardrails
-> Create or update `docs/tests/architecture.md` to document the approved suite structure, naming rules, fixture lifecycles, reusable helpers, mocking strategy, and dependency boundaries. Use markdown checklists for required patterns and annotate examples pulled from current suites.  
-> **Scope:** Only modify `docs/tests/architecture.md`; no other file changes.
+### 2️⃣ Define Guardrails in One Doc
+> Create `docs/tests/architecture.md` (or update it if present) with sections for approved suite structure, naming rules, fixture lifecycles, reusable helpers, and mocking strategy. Use markdown checklists for every non-negotiable pattern so actionable items live in this single file.  
+> **Scope:** Modify only `docs/tests/architecture.md`; no other files.
 
-### 3️⃣ Log DRY & Pattern Gaps
-> Compare existing suites against the guardrails and record every duplicated setup, fixture drift, or brittle pattern as precise checklist items in `docs/tests/refactors.md` (one per gap) with file references and desired outcomes.  
-> **Scope:** Append findings only to `docs/tests/refactors.md`; leave other files untouched.
+### 3️⃣ Log DRY Gaps & Backlog Items
+> In the same file, append a "Refactor Backlog" section where each duplicated setup, fixture drift, or brittle pattern becomes a checkbox entry with file paths, desired outcome, and linked guardrail requirement. Keep all actionable items in `docs/tests/architecture.md`.  
+> **Scope:** Update only `docs/tests/architecture.md`; leave other files untouched.
 
-### 4️⃣ Prioritize Architecture Fixes
-> Group backlog entries by suite, order them by risk vs effort, and note dependencies so DRY refactors land in a logical sequence. Ensure each item links back to the relevant guardrail requirement inside `docs/tests/refactors.md`.  
-> **Scope:** Read tests and planning docs; update `docs/tests/refactors.md` only.
-
-### 5️⃣ Implement First Pattern Refactor (Repeatable)
-> Open `docs/tests/refactors.md`, grab the first unchecked item, and refactor the referenced tests to reuse shared helpers, align naming, or restructure folders according to the guardrails. Do not modify production code or non-test docs.  
+### 4️⃣ Implement First Backlog Entry (Repeatable)
+> Open `docs/tests/architecture.md`, grab the first unchecked backlog item, and refactor the referenced tests to reuse shared helpers, align naming, or restructure folders according to the guardrails. Do not modify production code or non-test docs.  
 > **Scope:** Edit only the affected test directories and shared test utilities referenced by the backlog item; no application source changes.
 
-### 6️⃣ Verify & Close Architecture Item
-> Run the impacted test suites, confirm the new structure meets guardrails, then mark the backlog entry as checked (- [x]) in `docs/tests/refactors.md`. Update `docs/tests/architecture.md` only if guardrails evolved during the refactor.  
-> **Scope:** Update `docs/tests/refactors.md` (and `docs/tests/architecture.md` when needed); restrict code edits to the test files already touched in step 5.
+### 5️⃣ Mark Progress in the Same Doc
+> After refactoring, return to `docs/tests/architecture.md`, mark the backlog item as checked (- [x]), and jot a short note on what changed and which suites were touched so the file stays the single source of truth.  
+> **Scope:** Update only `docs/tests/architecture.md`; no other doc edits.
+
+### 6️⃣ Verify Against Guardrails
+> Run the impacted test suites, confirm the new structure honors every guardrail, and, if guardrails evolved, update the relevant checklist entries in `docs/tests/architecture.md` to reflect the latest patterns.  
+> **Scope:** Read/execute tests as needed; modify only `docs/tests/architecture.md` when documenting verification.
