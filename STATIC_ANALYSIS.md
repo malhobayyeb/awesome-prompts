@@ -26,7 +26,3 @@ Run steps 1️⃣–5️⃣ once to establish the baseline; repeat 6️⃣–7�
 ### 6️⃣ Implement First Remediation Item (Repeatable)
 > Open `docs/static-analysis/findings.md`, take the top unchecked item, apply the fix with minimal, behavior-preserving changes, remove any related suppressions, and mark the item as checked when verified.  
 > **Scope:** Modify only affected source/test files and related suppressions; avoid dependency changes; keep behavior unchanged.
-
-### 7️⃣ Re-run and Verify (Repeatable)
-> Re-run the static analysis tools on the updated codebase. Update `docs/static-analysis/baseline.md` with the new run (commands, timestamp, deltas), and mark completed items in `docs/static-analysis/findings.md`.  
-> **Scope:** Execute tools; respect ignore settings; update `docs/static-analysis/baseline.md` and `docs/static-analysis/findings.md`; no other file changes.
