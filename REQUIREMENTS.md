@@ -1,7 +1,7 @@
 # Requirements Prompt Pack
 
 ## Workflow
-Run steps 1️⃣–7️⃣ once to build the baseline requirements; repeat 8️⃣–9️⃣ to maintain and communicate updates as the system evolves.
+Run steps 1️⃣–7️⃣ once to build the baseline requirements; repeat 8️⃣ to maintain and refine updates as the system evolves.
 
 ### 1️⃣ Map Behaviors From Tests
 > Analyze all test files (unit, integration, feature, system) to infer validated behaviors, business rules, user interactions, and system flows. Capture high-level functional requirements implied by the tests.  
@@ -34,7 +34,3 @@ Run steps 1️⃣–7️⃣ once to build the baseline requirements; repeat 8️
 ### 8️⃣ Refine and Normalize Requirements
 > Review `docs/tests/agile-requirements.md` to merge duplicates, clarify vague language, enforce consistent formatting, and reorder for logical flow so each epic is cohesive.  
 > **Scope:** Only edit `docs/tests/agile-requirements.md`; no other files.
-
-### 9️⃣ Annotate Metadata (Optional)
-> Add optional metadata to user stories—milestones, priority (High/Medium/Low), and responsible team—using consistent formatting without clutter.  
-> **Scope:** Only update `docs/tests/agile-requirements.md`; do not change code or tests.
