@@ -12,11 +12,11 @@ Run steps 1️⃣–5️⃣ once to build the baseline requirements; repeat 6️
 > **Scope:** Read-only access to source code; respect ignore settings; do not create or modify files.
 
 ### 3️⃣ Capture Non-Functional Requirements
-> Extract performance, reliability, security, scalability, observability, and accessibility requirements from code, configuration, infrastructure definitions, and test artifacts. Add them to a Non-Functional Requirements section in `docs/tests/agile-requirements.md` with measurable criteria where possible.  
-> **Scope:** Read code, tests, configs, and infra definitions; only write to `docs/tests/agile-requirements.md`; do not change other files.
+> Extract performance, reliability, security, scalability, observability, and accessibility requirements from code, configuration, infrastructure definitions, and test artifacts. Compile a structured list with measurable criteria ready for insertion into the requirements doc in the next step.  
+> **Scope:** Read code, tests, configs, and infra definitions; do not modify files.
 
 ### 4️⃣ Draft Agile Requirements Doc
-> Create `docs/tests/agile-requirements.md` with Epics and grouped user stories formatted as "As a [role], I want to [action] so that [outcome]." Base content on findings from tests and source.  
+> Create `docs/tests/agile-requirements.md` with Epics and grouped user stories formatted as "As a [role], I want to [action] so that [outcome]." Include a Non-Functional Requirements section populated from the list captured in the previous step. Base content on findings from tests and source.  
 > **Scope:** Only write to `docs/tests/agile-requirements.md`; do not change other files.
 
 ### 5️⃣ Capture and Expand Missing Requirements
