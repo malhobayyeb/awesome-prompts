@@ -16,5 +16,5 @@ Run steps 1️⃣–3️⃣ once to inventory and log findings; repeat 4️⃣ t
 > **Scope:** Write only to `docs/static-analysis/findings.md`; do not modify source or configs.
 
 ### 4️⃣ Implement First Remediation Item (Repeatable)
-> Open `docs/static-analysis/findings.md`, take the top unchecked item, apply the fix with minimal, behavior-preserving changes, remove any related suppressions, and mark the item as checked when verified.  
+> Open `docs/static-analysis/findings.md`, take the top unchecked item, and fix the root cause (no workarounds or new suppressions/ignores/annotations). Apply minimal, behavior-preserving changes that follow existing repo practices, remove related suppressions, and mark the item as checked when verified.  
 > **Scope:** Modify only affected source/test files and related suppressions; avoid dependency changes; keep behavior unchanged.
