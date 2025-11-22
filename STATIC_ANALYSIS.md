@@ -8,7 +8,7 @@ Run steps 1️⃣–5️⃣ once to establish the baseline; repeat 6️⃣–7�
 > **Scope:** Read-only across the repository; respect ignore settings; do not modify configs or code.
 
 ### 2️⃣ Establish Baseline Report
-> Run the configured static analysis tools with default settings to produce a current-state report. Persist results to `docs/static-analysis/baseline.md`, including commands, timestamp, and summarized findings.  
+> Run the configured static analysis tools using the project’s checked-in settings to produce a current-state report. Persist results to `docs/static-analysis/baseline.md`, including commands, timestamp, and summarized findings.  
 > **Scope:** Execute tools; respect ignore settings; write only to `docs/static-analysis/baseline.md`; do not change source or configs.
 
 ### 3️⃣ Classify Findings
