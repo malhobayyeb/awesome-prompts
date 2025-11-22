@@ -33,7 +33,7 @@ Run steps 1️⃣–5️⃣ once to map and validate gaps; repeat 6️⃣ until 
 Run steps 1️⃣–4️⃣ once to capture only confirmed drifts inside `docs/tests/drifts.md`; repeat 5️⃣ until the checklist is empty.
 
 ### 1️⃣ Audit Established Architecture
-> Inspect every existing test suite (unit, integration, e2e, UI, contract) to reverse-engineer the implicit patterns, principles, practices, and standards directly from the source code—assume no external documents.  
+> Inspect every existing test suite (unit, integration, e2e, UI, contract) to reverse-engineer the implicit patterns, principles, practices, and standards directly from the source code.  
 > **Scope:** Read-only access to guardrail docs and all test directories; do not modify files.
 
 ### 2️⃣ Detect Architecture Drifts
